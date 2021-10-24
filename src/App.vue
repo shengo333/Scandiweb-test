@@ -1,17 +1,43 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+  <Header/>
+</div>
+<div class="product_container">
+  
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+    <Container />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Header from './components/Header.vue'
+import Container from './components/Container.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Header,
+    Container,
+  },
 }
+
+
 </script>
 
 <style>
@@ -22,5 +48,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.product_container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
 }
 </style>
