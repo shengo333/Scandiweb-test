@@ -4,22 +4,11 @@
 </div>
 <div class="product_container">
   
-    <Container />
-    <Container />
-    <Container />
-    <Container />
-    <Container />
-    <Container />
-    <Container />
-    <Container />
-    <Container />
-    <Container />
-    <Container />
-    <Container />
-    <Container />
-    <Container />
-    <Container />
-    <Container />
+<Container  :key="product.id" v-for="product in products" :product="product" />
+
+  </div>
+  <div>
+    <Footer/>
   </div>
 </template>
 
@@ -27,6 +16,8 @@
 
 import Header from './components/Header.vue'
 import Container from './components/Container.vue'
+import Footer from './components/Footer.vue'
+
 
 
 export default {
@@ -34,8 +25,46 @@ export default {
   components: {
     Header,
     Container,
+    Footer,
   },
+  data(){
+    return{
+      products: []
+    }
+  },
+  created(){
+    this.products = [
+      {
+        id: 1,
+        type: 'JVC200123',
+        name: 'Acme Disc',
+        price: '1.00 $',
+        size: 'Size: 700 MB',
+      },
+            {
+        id: 2,
+        type: 'GGWP0007',
+        name: 'War and Peace',
+        price: '20.00 $',
+        size: 'Weight: 2 KG',
+      },
+            {
+        id: 3,
+        type: 'TR120555',
+        name: 'Chair',
+        price: '40.00 $',
+        size: 'Dimension: 24x45x15',
+      },   
+    ]
+    this.bekaNaxe()
+  },
+  methods: {
+    bekaNaxe() {
+      console.log("age tu zevit marto")
+    }
+  }
 }
+
 
 
 </script>

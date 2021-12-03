@@ -2,8 +2,8 @@
     <div class="product_header">
         <h1> Product list </h1>
         <div class="product_header_options">
-            <button> Add </button>
-            <button> Delete </button>
+            <button id="add"> Add </button>
+            <button id="delete_product_button"> Delete </button>
         </div>
     </div>
 </template>
