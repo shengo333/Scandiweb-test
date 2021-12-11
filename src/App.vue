@@ -1,14 +1,16 @@
 <template>
-<div>
-  <Header/>
-</div>
-<div class="product_container">
-  
-<Container  :key="product.id" v-for="product in products" :product="product" />
-
-  </div>
   <div>
-    <Footer/>
+    <div>
+      <Header/>
+    </div>
+    <div class="product_container">
+      
+    <Container  :key="product.id" v-for="product in products" :product="product" />
+
+      </div>
+      <div>
+        <Footer/>
+      </div>
   </div>
 </template>
 
@@ -56,12 +58,9 @@ export default {
         size: 'Dimension: 24x45x15',
       },   
     ]
-    this.bekaNaxe()
   },
   methods: {
-    bekaNaxe() {
-      console.log("age tu zevit marto")
-    }
+
   }
 }
 
